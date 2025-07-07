@@ -1,4 +1,4 @@
-# aqa-asm README
+# AQA ASM
 Syntax Highlighting for the AQA Assembly Instruction set
 
 ## Features
