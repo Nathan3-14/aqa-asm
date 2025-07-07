@@ -1,7 +1,8 @@
-# AQA ASM
+# AQA Assembly (ASM)
 Syntax Highlighting for the AQA Assembly Instruction set
 
 ## Features
+Works on .asm, .as and .a files<br>
 Keyword highlighting (ADD, SUB, CMP etc)<br>
 Branches, registers and numbers as well
 
@@ -13,3 +14,6 @@ Branches, registers and numbers as well
 Initial release
 ### 1.0.1
 Fixed bug with branch names
+### 1.0.2
+Changed display name
+Updated readme
