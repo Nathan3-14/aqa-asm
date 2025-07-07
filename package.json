@@ -1,5 +1,6 @@
 {
   "name": "aqa-asm",
+  "publisher": "Nathan3-14",
   "displayName": "AQA ASM",
   "description": "Syntax highlighter for AQA assembly code",
   "version": "1.0.1",
