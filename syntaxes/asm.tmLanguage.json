@@ -6,24 +6,40 @@
 			"include": "#keywords"
 		},
 		{
-			"include": "#strings"
+			"include": "#constants"
+		},
+		{
+			"include": "#variables"
 		}
 	],
 	"repository": {
 		"keywords": {
 			"patterns": [{
-				"name": "keyword.control.asm",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
+					"name": "keyword.control.asm",
+					"match": "\\b(LDR|STR|ADD|SUB|MOV|CMP|INP|OUT|B(EQ|NE|GT|LT)|(B .+)|HALT)\\b"
+				}]
 		},
-		"strings": {
-			"name": "string.quoted.double.asm",
-			"begin": "\"",
-			"end": "\"",
+		"constants": {
 			"patterns": [
 				{
-					"name": "constant.character.escape.asm",
-					"match": "\\\\."
+					"name": "constant.asm",
+					"match": "\\bR(1[0-2]|[0-9])\\b"
+				},
+				{
+					"name": "constant.other.asm",
+					"match": "\\b2|4\\b"
+				},
+				{
+					"name": "constant.numeric.asm",
+					"match": "#[0-9]+"
+				}
+			]
+		},
+		"variables": {
+			"patterns": [
+				{
+					"name": "variable.name.asm",
+					"match": "[A-Z]+:?"
 				}
 			]
 		}
