@@ -16,7 +16,7 @@
 		"keywords": {
 			"patterns": [{
 					"name": "keyword.control.asm",
-					"match": "\\b(LDR|STR|ADD|SUB|MOV|CMP|INP|OUT|B(EQ|NE|GT|LT)|(B .+)|HALT)\\b"
+					"match": "\\b(LDR|STR|ADD|SUB|MOV|CMP|INP|OUT|B(EQ|NE|GT|LT)|(B)|HALT)\\b"
 				}]
 		},
 		"constants": {
