@@ -10,6 +10,9 @@
 		},
 		{
 			"include": "#variables"
+		},
+		{
+			"include": "#comments"
 		}
 	],
 	"repository": {
@@ -40,6 +43,14 @@
 				{
 					"name": "variable.name.asm",
 					"match": "[A-Z]+:?"
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line",
+					"match": "//.+"
 				}
 			]
 		}

@@ -3,7 +3,7 @@
   "publisher": "Nathan3-14",
   "displayName": "AQA Assembly (ASM)",
   "description": "Syntax highlighter for AQA assembly code",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "repository": {
     "type": "git",
     "url": "https://github.com/Nathan3-14/aqa-asm.git"
