@@ -9,6 +9,10 @@ Branches, registers, numbers and comments
 (With Bearded Coffee Theme)<br>
 <img src="images/example1.png" width="250px"></img>
 
+## Todo
+Add intellisense (for commands and labels)
+Add checking for command args (eg ADD R2, #1 has an error)
+
 ## Releases
 ### 1.0.0 (7/7/25)
 Initial release
