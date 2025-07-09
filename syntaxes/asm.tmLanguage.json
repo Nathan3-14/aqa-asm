@@ -3,6 +3,9 @@
 	"name": "AQA Assembly",
 	"patterns": [
 		{
+			"include": "#comments"
+		},
+		{
 			"include": "#keywords"
 		},
 		{
@@ -10,9 +13,6 @@
 		},
 		{
 			"include": "#variables"
-		},
-		{
-			"include": "#comments"
 		}
 	],
 	"repository": {

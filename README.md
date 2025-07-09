@@ -22,3 +22,6 @@ Added comment colouring
 ### 1.0.4 (9/7/25)
 Fixed README
 Removed redundant CHANGELOG.md
+### 1.0.5 (9/7/25)
+Fixed comments
+Removed quickstart.md
