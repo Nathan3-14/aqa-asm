@@ -3,10 +3,10 @@
   "publisher": "Nathan3-14",
   "displayName": "AQA Assembly (ASM)",
   "description": "Syntax highlighter for AQA assembly code",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "./out/extension.js",
   "activationEvents": [
-    "onLanguage:aqa-asm"
+    "onLanguage:asm"
   ],
   "repository": {
     "type": "git",
