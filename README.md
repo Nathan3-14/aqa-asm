@@ -10,8 +10,9 @@ Branches, registers, numbers and comments
 <img src="images/example1.png" width="250px"></img>
 
 ## Todo
-Add intellisense (for commands and labels)
-Add checking for command args (eg ADD R2, #1 has an error)
+Add intellisense (for commands and labels)<br>
+[DONE] Add checking for command args (eg ADD <u>0</u>, R2, #1 has an error)<br>
+Check for lack of arguments (eg ADD R0, #1 has and error)
 
 ## Releases
 ### 1.0.0 (7/7/25)
@@ -30,4 +31,5 @@ Removed redundant CHANGELOG.md
 Fixed comments
 Removed quickstart.md
 ### 1.0.6 (10/7/25)
-Added support for .aqa files
+Added argument type checking
+Fixed colouring for memory addresses (002 is now valid)
