@@ -29,3 +29,5 @@ Removed redundant CHANGELOG.md
 ### 1.0.5 (9/7/25)
 Fixed comments
 Removed quickstart.md
+### 1.0.6 (10/7/25)
+Added support for .aqa files
