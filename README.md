@@ -2,9 +2,9 @@
 Syntax Highlighting for the AQA Assembly Instruction set
 
 ## Features
-Works on .asm, .as and .a files<br>
-Keyword highlighting (ADD, SUB, CMP etc)<br>
-Branches, registers, numbers and comments
+Works on .asm, .as, .a and .aqa files<br>
+Syntax highlighting<br>
+Auto-completion (can be toggled in aqa-asm.auto_completion)
 
 (With Bearded Coffee Theme)<br>
 <img src="images/example1.png" width="250px"></img>
@@ -25,11 +25,14 @@ Updated README
 ### 1.0.3 (9/7/25)
 Added comment colouring
 ### 1.0.4 (9/7/25)
-Fixed README
+Fixed README<br>
 Removed redundant CHANGELOG.md
 ### 1.0.5 (9/7/25)
 Fixed comments
 Removed quickstart.md
 ### 1.0.6 (10/7/25)
-Added argument type checking
+Added argument type checking<br>
 Fixed colouring for memory addresses (002 is now valid)
+### 1.0.7 (12/7/25)
+Fixed README.md<br>
+Added auto-complete

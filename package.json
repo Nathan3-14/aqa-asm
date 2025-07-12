@@ -3,7 +3,7 @@
   "publisher": "Nathan3-14",
   "displayName": "AQA Assembly (ASM)",
   "description": "Syntax highlighter for AQA assembly code",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "./out/extension.js",
   "activationEvents": [
     "onLanguage:asm"
@@ -19,6 +19,15 @@
     "Programming Languages"
   ],
   "contributes": {
+    "configuration": {
+      "properties": {
+        "aqa-asm.auto_complete": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable auto-completion"
+        }
+      }
+    },
     "languages": [
       {
         "id": "asm",

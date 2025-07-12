@@ -5,10 +5,51 @@ const register_pattern = /\bR(1[0-2]|[0-9])\b/;
 const number_pattern = /#[0-9]+/;
 const memory_pattern = /\b[0-2]?[0-9]?[0-9]\b/
 
+
 export function activate(context: vscode.ExtensionContext) {
     console.log("Extension activated");
-    const collection = vscode.languages.createDiagnosticCollection("asm");
-    context.subscriptions.push(collection);
+
+    var auto_complete_enabled = vscode.workspace.getConfiguration('aqa-asm').get<boolean>('auto_complete', true); 
+
+    context.subscriptions.push(
+        vscode.workspace.onDidChangeConfiguration(e => {
+            if (e.affectsConfiguration('aqa-asm.auto_complete')) {
+                auto_complete_enabled = vscode.workspace.getConfiguration('aqa-asm').get<boolean>('auto_complete', true);
+            }
+        })
+    );
+
+    const diagnostic_collection = vscode.languages.createDiagnosticCollection("asm");
+    context.subscriptions.push(diagnostic_collection);
+
+    const completion_provider = vscode.languages.registerCompletionItemProvider("asm", {
+        provideCompletionItems(document: vscode.TextDocument, position: vscode.Position) {
+            let completion_item = (name: string, args: string) => {
+                let temp_item = new vscode.CompletionItem(name, vscode.CompletionItemKind.Snippet)
+                temp_item.insertText = new vscode.SnippetString(name + args)
+                return temp_item
+            }
+            const completion_items = [
+                completion_item("LDR", " R$1, $0"),
+                completion_item("STR", " R$1, $0"),
+                completion_item("ADD", " R$1, R$2, $0"),
+                completion_item("SUB", " R$1, R$2, $0"),
+                completion_item("MOV", " R$1, $0"),
+                completion_item("CMP", " R$1, $0"),
+                completion_item("INP", " R$1, $0"),
+                completion_item("OUT", " R$1, $0"),
+                completion_item("B", "$1 $0"),
+                completion_item("HALT", "")
+            ];
+            if (auto_complete_enabled) {
+                return completion_items;
+            } else {
+                return null;
+            }
+            }
+        }
+    );
+    context.subscriptions.push(completion_provider);
 
     vscode.workspace.onDidSaveTextDocument(doc => {
         if (doc.languageId !== "asm") return;
@@ -136,8 +177,12 @@ export function activate(context: vscode.ExtensionContext) {
             }
         }
 
-        collection.set(doc.uri, diagnostics);
+        diagnostic_collection.set(doc.uri, diagnostics);
     });
+
+    
 }
+
+
 
 export function deactivate() {}
